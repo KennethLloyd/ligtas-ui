@@ -1,0 +1,32 @@
+{
+  "name": "ligtas-ui",
+  "version": "1.0.0",
+  "description": "UI for project ligtas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KennethLloyd/ligtas-ui.git"
+  },
+  "keywords": [
+    "landslides",
+    "ui",
+    "help",
+    "disaster",
+    "map"
+  ],
+  "author": "Honey Grace Garay, Frances Lois Ritualo, Kenneth Lloyd Verastigue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KennethLloyd/ligtas-ui/issues"
+  },
+  "homepage": "https://github.com/KennethLloyd/ligtas-ui#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
