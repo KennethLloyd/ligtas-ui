@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <!-- <base href="/"> -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" >
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel = "stylesheet"
+          href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel = "stylesheet"
+          href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+        <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+
+        <title>Project Ligtas</title>
+
+        
+        <script type="text/javascript" src="app.js"></script>
+
+        <script type="text/javascript" src="controllers/header-ctrl.js"></script>
+        <script type="text/javascript" src="controllers/content-ctrl.js"></script>
+        <script type="text/javascript" src="controllers/map-ctrl.js"></script>
+
+
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyDDT-nkDayGELOZU-e3fM9IhWC7rUabfUI&libraries=placeses,visualization,drawing,geometry,places&key=AIzaSyCbMGRUwcqKjlYX4h4-P6t-xcDryRYLmCM"></script>
+
+
+    </head>
+    <body ng-app="app">
+        <div id="wrapper">
+            <div ui-view="topbar"></div>
+            <div ui-view="content"></div>
+        </div>
+    </body>
+</html>
