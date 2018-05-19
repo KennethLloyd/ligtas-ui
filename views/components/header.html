@@ -1,13 +1,13 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper grey darken-1">
-    <ul id="nav-mobile" class="left">
-    <li><a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" href='#' data-activates='dropdown2'><i class="material-icons">menu</i></a></li>
-    </ul>
+      <ul id="nav-mobile" class="left">
+          <li><a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" href='#' data-activates='dropdown2'><i class="material-icons">menu</i></a></li>
+      </ul>
       <a href="#" class="brand-logo">Landslide Monitoring System</a>
       <!--<img id="logo" class="brand-logo left" src="../../assets/images/logo_web.png" alt="Ligtas Logo"/>-->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Sign in</a></li>
+        <li><a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='signin'>Sign in</a></li>
       </ul>
     </div>
 
@@ -15,26 +15,52 @@
 </div>
 
 <!-- Dropdown Structure -->
-<ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
-    <li class="divider"></li>
-    <li><a href="#!">three</a></li>
-  </ul>
+<ul id='signin' class='dropdown-content noclose'>
+    <div class="row container">
+    <h5> Login with Email</h5>
+       <form class="login-form" ng-submit="vm.login(user)" ng-data-model="user">
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="email" class="validate" name="email" ng-model="user.email" required>
+              <label for="email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="password" class="validate" name="password" ng-model="user.password" required>
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" action="submit" ng-disabled="vm.submitted==true">Login
+            <!-- <i class="material-icons right">send</i> -->
+          </button>
+        </form>
+        <div class="divider"></div>
+        <span>Login with</span>
+        <div  id="social-sign">
+            <a class="waves-effect waves-light btn col s5 m5 facebook"><i class="fa fa-facebook fa-fw"></i> Facebook</a>
+            <a class="waves-effect waves-light btn col s5 m5 google "><i class="fa fa-google fa-fw"></i> Google</a>
 
-<div>
-<ul id="dropdown2" class="dropdown-content">
+        </div>
+        </div>
+</ul>
+
+
+<ul id="dropdown2" class="dropdown-content noclose">
+<!--     <li>{{curr}}</li>
+    <li><button ng-click=add()>jjjk</button></li> -->
   <li><img src="../images/rockslide.jpg" id="rockslide"></li>
+
   <li>
     <div class="col s12 m5">
       <div class="card-title grey darken-1 z-depth-2">
-        <span class="white-text">&nbsp;Rock Slide</span>
+        <span class="white-text">&nbsp;{{vm.data[curr].type}}</span>
       </div>
     </div>
   </li>
   <li>
-    <span id="landslide_icon_span">
-      <i class="large material-icons" id="arrow_back">arrow_back</i>
+    <span id="landslide_icon_span" >
+     <i class="large material-icons" id="arrow_back">arrow_back</i>
       <img src="../images/landslide_icon.png" alt="landslide_icon" id="landslide_icon">
       <i class="large material-icons" id="arrow_forward">arrow_forward</i>
     </span>
@@ -50,7 +76,7 @@
   <li>
     <div class="col s12 m5">
       <div class="card-content teal lighten-4 z-depth-2" id="card_details_1a">
-        <span id="card_details_1b">Jamboree Rd, Los Banos, Laguna</span>
+        <span id="card_details_1b">{{vm.data[curr].place}}</span>
       </div>
     </div>
   </li>
@@ -119,7 +145,7 @@
       inDuration: 300,
       outDuration: 225,
       constrain_width: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
+      // hover: true, // Activate on hover
       gutter: 0, // Spacing from edge
       belowOrigin: false, // Displays dropdown below the button
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
@@ -134,7 +160,8 @@
        belowOrigin: true 
        }
     );
-	})
+	});
+
 </script>
 
 

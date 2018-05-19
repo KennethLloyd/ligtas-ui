@@ -142,6 +142,7 @@ nav .brand-logo {
 #card_details_3b {
 	margin-left: 0.5%;
 	font-size: 14px;
+
 }
 
 #card_title_4a {
@@ -172,4 +173,19 @@ nav .brand-logo {
 
 #card_title_6b {
 	margin-left: 18%;
+}
+
+#signin  {
+	background: rgba(1,1,1,0.6);
+	min-width: 20%;
+	text-align: center;
+	margin-right: 0%;
+}
+
+#loginbtn{
+	width: 100%;
+	margin: 200px;
+}
+#social-signin {
+	/*margin-left: 100px;*/
 }
