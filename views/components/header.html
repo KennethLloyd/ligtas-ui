@@ -1,12 +1,13 @@
 <div class="navbar-fixed">
   <nav>
-    <div class="nav-wrapper">
-      <img id="logo" class="brand-logo left" src="../../assets/images/logo_web.png" alt="Ligtas Logo"/>
+    <div class="nav-wrapper grey darken-1">
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+    <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2'>Menu</a></li>
+    </ul>
+      <a href="#" class="brand-logo">Landslide Monitoring System</a>
+      <!--<img id="logo" class="brand-logo left" src="../../assets/images/logo_web.png" alt="Ligtas Logo"/>-->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        
-       <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Signin</a></li>
-
-  
+        <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Signin</a></li>
       </ul>
     </div>
 
@@ -14,20 +15,39 @@
 </div>
 
 <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
+<ul id='dropdown1' class='dropdown-content'>
     <li><a href="#!">one</a></li>
     <li><a href="#!">two</a></li>
-    <li class="divider" tabindex="-1"></li>
+    <li class="divider"></li>
     <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
   </ul>
 
-
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="#!">First Sidebar Link</a></li>
+  <li><a href="#!">Second Sidebar Link</a></li>
+</ul>
 
 <script>
 	$(document).ready(function () {
-		$('.dropdown-trigger').dropdown();
+		$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
+    }
+  );
+    $(".button-collapse").dropdown({
+           inDuration: 300,
+           outDuration: 225,
+           constrain_width: true, 
+           hover: false, 
+           gutter: 0, 
+           belowOrigin: true 
+           }
+      );
 	})
 </script>
 
