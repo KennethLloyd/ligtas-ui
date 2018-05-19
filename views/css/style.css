@@ -1,4 +1,60 @@
 #map {
-  height: 90%;
-  position: relative;
+	margin-top: -25px;
+  	height: 90%;
+  	position: relative;
+}
+
+nav {
+    height: 40px;
+    line-height: 40px;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 40px;
+    line-height: 40px;
+}
+
+nav .button-collapse i {
+    height: 40px;
+    line-height: 40px;
+}
+
+nav .brand-logo { 
+    font-size: 1.4em; 
+}
+
+@media only screen and (min-width: 601px){
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+#dropdown2 {
+	height: 100em;
+	width: 20%;
+}
+
+#dropdown2 #rockslide {
+	width: 100%;
+}
+
+.card-title {
+	margin-left: 0px;
+	margin-top: -5px;
+	height: 25px;
+	width: 100em;
+}
+
+#landslide_icon_div {
+	margin-top: -25px;
+	background-color: gray;
+}
+
+#landslide_icon {
+	height: 10%;
+
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

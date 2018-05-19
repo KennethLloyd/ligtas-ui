@@ -2,12 +2,12 @@
   <nav>
     <div class="nav-wrapper grey darken-1">
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-    <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown2'>Menu</a></li>
+    <li><a class='dropdown-button' data-beloworigin="true" data-constrainwidth="false" href='#' data-activates='dropdown2'><i class="material-icons">menu</i></a></li>
     </ul>
       <a href="#" class="brand-logo">Landslide Monitoring System</a>
       <!--<img id="logo" class="brand-logo left" src="../../assets/images/logo_web.png" alt="Ligtas Logo"/>-->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Signin</a></li>
+        <li><a class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1'>Sign in</a></li>
       </ul>
     </div>
 
@@ -23,6 +23,19 @@
   </ul>
 
 <ul id="dropdown2" class="dropdown-content">
+  <li><img src="../images/rockslide.jpg" id="rockslide"></li>
+  <li>
+    <div class="col s12 m25">
+      <div class="card-title grey darken-1 z-depth-2">
+        <span class="white-text">&nbsp;Rock Slide</span>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div id="landslide_icon_div">
+      <img src="../images/landslide_icon.png" id="landslide_icon">
+    </div>
+  </li>
   <li><a href="#!">First Sidebar Link</a></li>
   <li><a href="#!">Second Sidebar Link</a></li>
 </ul>
@@ -39,15 +52,15 @@
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
     }
   );
-    $(".button-collapse").dropdown({
-           inDuration: 300,
-           outDuration: 225,
-           constrain_width: true, 
-           hover: false, 
-           gutter: 0, 
-           belowOrigin: true 
-           }
-      );
+  $(".button-collapse").dropdown({
+       inDuration: 300,
+       outDuration: 225,
+       constrain_width: false, 
+       hover: false, 
+       gutter: 0, 
+       belowOrigin: true 
+       }
+    );
 	})
 </script>
 
