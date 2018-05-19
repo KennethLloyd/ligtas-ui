@@ -1,6 +1,6 @@
 #map {
 	margin-top: -25px;
-  	height: 90%;
+  	height: 94%;
   	position: relative;
 }
 
@@ -31,8 +31,14 @@ nav .brand-logo {
 }
 
 #dropdown2 {
+	overflow-y: hidden;
+	background: rgba(1,1,1,0.6);
 	height: 100em;
 	width: 20%;
+}
+
+#dropdown2 li {
+	pointer-events:none;
 }
 
 #dropdown2 #rockslide {
@@ -43,18 +49,127 @@ nav .brand-logo {
 	margin-left: 0px;
 	margin-top: -5px;
 	height: 25px;
-	width: 100em;
+	width: 100%;
 }
 
-#landslide_icon_div {
+#card_title_1a {
+	margin-top: -5px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_1b {
+	margin-left: 34%;
+}
+
+#landslide_icon_span {
 	margin-top: -25px;
-	background-color: gray;
+	text-align: center;
+}
+
+#arrow_back {
+	float: left;
+}
+
+#arrow_forward {
+	float: right;
 }
 
 #landslide_icon {
 	height: 10%;
 
-	display: block;
+	display: inline-block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.edit_icon {
+	float: right;
+}
+
+.arrow_down_icon {
+	float: right;
+}
+
+#card_details_1a {
+	margin-top: -30px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_details_1b {
+	margin-left: 7%;
+	font-size: 14px;
+}
+
+#card_title_2a {
+	margin-top: -50px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_2b {
+	margin-left: 28%;
+}
+
+#card_details_2a {
+	margin-top: -75px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_details_2b {
+	margin-left: 12%;
+	font-size: 14px;
+}
+
+#card_title_3a {
+	margin-top: -95px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_3b {
+	margin-left: 14%;
+}
+
+#card_details_3a {
+	margin-top: -120px;
+	height: 70px;
+	width: 100%;
+}
+
+#card_details_3b {
+	margin-left: 0.5%;
+	font-size: 14px;
+}
+
+#card_title_4a {
+	margin-top: -93px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_4b {
+	margin-left: 15%;
+}
+
+#card_title_5a {
+	margin-top: -113px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_5b {
+	margin-left: 17%;
+}
+
+#card_title_6a {
+	margin-top: -132px;
+	height: 23px;
+	width: 100%;
+}
+
+#card_title_6b {
+	margin-left: 18%;
 }
