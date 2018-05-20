@@ -281,7 +281,7 @@ nav .brand-logo {
 }
 
 #signin  {
-	background: rgba(64,64,64,1);
+	background: rgba(64,64,64,.9);
 	min-width: 20%;
 	text-align: center;
 	margin-right: 0%;
