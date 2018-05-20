@@ -4,8 +4,131 @@
 
   <!-- <ng-map></ng-map> -->
 </div>
+<nav class="searchnav"> <!-- search bar -->
+  <div class="nav-wrapper grey darken-1">
+	  <form>
+	    <div class="input-field">
+	      <input id="search" type="search" class="col white-text" required>
+	      <label class="label-icons" for="search"><i class="material-icons search-icon prefix">search</i></label>
+	      <i class="material-icons">close</i>
+	    </div>
+	  </form>
+	</div>
+</nav>
+
 <div id="right-info">
-  <div>
-  	<h3>This is a header</h3>
-  </div>
+  <br/>
+	
+
+	<div class="row" id="Landslide">
+    <div class="col">
+      <div class="card grey darken-1">
+        <div class="card-content black-text center  teal lighten-4 z-depth-2z">
+          <span class="card-title  teal lighten-4 z-depth-2" id="LandslideOccurTitle">LANDSLIDE REPORTS</span>
+          
+          <ul id="LandslideBody">
+
+          	<li>
+			    <div class="col">
+			    	<div class="center" id="LandslideTimeContainer">
+			      	<span class="black-text" id="LandslideTime">TODAY</span>
+			      </div>
+			      <div class="white-text" id="LandslideCount">
+			      	<span class="black-text "> 1 </span>
+			      	<a class="teal lighten-3 z-depth-2 btn-flat btn-small white-text" id="LandslideView">view</a>
+			      </div>
+			    </div>
+
+			  </li>
+			  <div class="col s12 divider"></div>
+			  <li>
+			    <div class="col center">
+			    	<div class="center" id="LandslideTimeContainer">
+			      	<span class="black-text" id="LandslideTime">THIS WEEK</span>
+			      </div>
+			      <div class="white-text" id="LandslideCount">
+			      	<span class="black-text"> 1 </span>
+			      	<a class="teal lighten-3 z-depth-2 btn-flat btn-small white-text" id="LandslideView">view</a>
+			      </div>
+			    </div>
+			  </li>
+			  <div class="col s12 divider"></div>
+			  <li>
+			    <div class="col center">
+			    	<div class="center" id="LandslideTimeContainer">
+			      	<span class="black-text" id="LandslideTime">THIS MONTH</span> </div>
+			      <div class="white-text" id="LandslideCount">
+			      	<span class="black-text"> 1 </span>
+			      	<a class="teal lighten-3 z-depth-2 btn-flat btn-small white-text" id="LandslideView">view</a>
+			      </div>
+			    </div>
+			  </li>
+
+          </ul>
+
+        </div>
+
+        <div class="row white-text" id="SendReports">
+        	<span class="card-title col s12 center-align" id="LandslideOccurTitle">SEND REPORTS</span>
+			  	<form class="col s11 center-align">
+			  		
+			  		<div class="row">
+			        <div class="input-field" id="ReportField">
+			        	<i class="material-icons prefix">location_on</i>
+			          <input id="land_address" type="text" class="validate">
+			          <label for="landslide_address">Landslide Address</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field" id="ReportField">
+			        	<i class="material-icons prefix">schedule</i>
+			          <input id="land_time" type="text" class="timepicker">
+			          <label for="landslide_time">Landslide Time</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field" id="ReportField">
+			        	<i class="material-icons prefix">event_note</i>
+			          <input id="land_date" type="text" class="datepicker">
+			          <label for="landslide_date">Landslide Date</label>
+			        </div>
+			      </div>
+
+			      <button class="teal lighten-3 btn waves-effect waves-light black-text center" type="submit" name="action" id="SubmitButton">Submit
+					    <i class="material-icons right">send</i>
+					  </button>
+
+			  	</form>
+			  </div>
+
+      </div>
+    </div>
+  </div> 
 </div>
+<script>
+	$('document').ready(function() {
+		// body...
+		$('.datepicker').pickadate({
+	    selectMonths: true, // Creates a dropdown to control month
+	    selectYears: 15, // Creates a dropdown of 15 years to control year,
+	    today: 'Today',
+	    clear: 'Clear',
+	    close: 'Ok',
+	    closeOnSelect: false // Close upon selecting a date,
+	  });
+		$('.timepicker').pickatime({
+		    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+		    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+		    twelvehour: false, // Use AM/PM or 24-hour format
+		    donetext: 'OK', // text for done-button
+		    cleartext: 'Clear', // text for clear-button
+		    canceltext: 'Cancel', // Text for cancel-button
+		    autoclose: false, // automatic close timepicker
+		    ampmclickable: true, // make AM PM clickable
+		    // aftershow: function(){} //Function for after opening timepicker
+		    closeOnSelect: false
+		  });
+	})
+</script>

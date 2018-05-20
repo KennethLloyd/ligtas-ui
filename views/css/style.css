@@ -30,6 +30,89 @@ nav .brand-logo {
         line-height: 40px;
     }
 }
+.searchnav{
+	float: right;
+	margin-right: 26px;
+	margin-top: -10px;
+	width: 18.7%;
+	height: 40px;
+}
+.searchnav .search-icon{
+	/*line-height: 40px;*/
+	/*margin-bottom: 100px;*/
+	margin-top: -9px;
+}
+#search{
+	/*vertical-align: middle;*/
+	/*position: relative;*/
+	/*vertical-align: middle;*/
+	/*line-height: normal;*/
+	/*width: 150px;*/
+	background: none;
+
+}
+/*#search{
+	width: 176px;
+    background: none;
+}*/
+#Landslide {
+	height: 100%;
+}
+
+#LandslideOccurTitle {
+	font-size: 18px;
+	margin-top:-15px;
+	/*margin-bottom: 6px;*/
+	padding-bottom: -10px;
+	font-weight:bold;
+	vertical-align: middle;
+
+}
+
+#LandslideBody {
+	padding:0px;
+	margin-top:5px;
+	height: 150px;
+}
+
+#LandslideTimeContainer {
+	margin-left:-10px;
+	width: 100px;
+}
+
+#LandslideTime {
+	margin-top: -5px;
+	width: 100%;
+}
+
+#LandslideCount {
+	/*margin-top: 5px;*/
+	margin-bottom: 5px;
+	margin-left:40px;
+}
+
+#LandslideView {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: -10px;
+	margin-left: 120px;
+	/*float: right;*/
+}
+
+#SendReports {
+	margin-top: 15px;
+}
+
+#ReportField {
+	height:30px;
+	margin-bottom: 10px;
+	font-color: white;
+
+}
+
+#SubmitButton {
+	margin-left:50px;
+}
 
 #dropdown2 {
 	overflow-y: hidden;
@@ -198,7 +281,7 @@ nav .brand-logo {
 }
 
 #signin  {
-	background: rgba(1,1,1,0.6);
+	background: rgba(64,64,64,1);
 	min-width: 20%;
 	text-align: center;
 	margin-right: 0%;
@@ -230,18 +313,13 @@ nav .brand-logo {
 	padding: 10px;
 }
 #right-info{
-	margin-left: 75%;
+	float: right;
+	margin-top: 1em;
+	margin-left: 79%;
 	position: absolute;
+	width: 20%;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(96,96,96);
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgb(96,96,96);
-}
-
-::-ms-input-placeholder { /* Microsoft Edge */
-    color: rgb(96,96,96);
+.filterdiv{
+	width: 100px;
+	position: absolute;
 }

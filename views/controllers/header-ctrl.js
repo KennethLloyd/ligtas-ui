@@ -60,7 +60,7 @@
         $rootScope.showCurr = (current) => {
             $scope.current = current;
             console.log("currroot: " + current);
-            $('.dropdown-button').dropdown('open');
+            // $('.dropdown-button').dropdown('open');
         }
 
     }
