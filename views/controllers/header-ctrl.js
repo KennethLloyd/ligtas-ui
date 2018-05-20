@@ -9,7 +9,7 @@
 
     function NavCtrl ($rootScope, $scope, $state, $stateParams){
         var vm             = this;
-        $scope.curr =0;
+        $rootScope.curr =0;
       
         vm.data = [];
         vm.data[0] = {
@@ -35,34 +35,32 @@
         }
 
         $rootScope.$on("CallShowMethod", function(index){
-            console.log(index);
-           $scope.showCurr(index);
+            console.log("Oncall" + index);
+            $scope.showCurr(index);
         });
 
         $scope.next = () => {
-            if($scope.curr < vm.data.length-1){
-        		$scope.curr+=1;
+            if($rootScope.curr < vm.data.length-1){
+        		$rootScope.curr+=1;
             }
         }
 
         $scope.prev = () => {
-            if($scope.curr > 0){
+            if($rootScope.curr > 0){
 
-                $scope.curr-=1;
+                $rootScope.curr-=1;
             }
         }
 
         $scope.showCurr = (current) => {
-           $scope.curr = current;
+           $rootScope.curr = current;
             console.log("curr: " + current);
 
         }
         $rootScope.showCurr = (current) => {
-           $scope.curr = current;
-            console.log("curr: " + current);
-            // $state.reload();
-             // $('.dropdown-button').dropdown('open');
-
+            $rootScope.current = current;
+            console.log("currroot: " + current);
+            $('.dropdown-button').dropdown('open');
         }
 
     }

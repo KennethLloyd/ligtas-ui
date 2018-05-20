@@ -198,7 +198,7 @@ nav .brand-logo {
 }
 
 #signin  {
-	background:rgb(1,1,1,.7);
+	background: rgba(1,1,1,0.6);
 	min-width: 20%;
 	text-align: center;
 	margin-right: 0%;

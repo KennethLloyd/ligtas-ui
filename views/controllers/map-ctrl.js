@@ -108,9 +108,8 @@
 
                 }
                 console.log(markers.indexOf(marker));
-                // $scope.curr = ;
 
-                 // $rootScope.$emit("CallShowMethod", markers.indexOf(marker));
+                 $rootScope.$emit("CallShowMethod", markers.indexOf(marker));
                  $rootScope.showCurr(markers.indexOf(marker));
                 if(marker.getIcon() == '../images/landslide_icon_clicked_red.png'){
                   console.log("red and clicked therefore closing");
