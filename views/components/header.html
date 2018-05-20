@@ -6,8 +6,10 @@
       </ul>
       <a href="#" class="brand-logo center">Landslide Monitoring System</a>
       <img id="logo" class="brand-logo left" src="../images/ligtas-logo.jpg" alt="Ligtas Logo"/>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class='dropdown-button1 btn teal' data-beloworigin="true" href='#' data-activates='signin'>Sign in</a></li>
+
+      <ul id="nav-mobile" class="right">
+      
+        <li><a class='dropdown-button1 btn teal transparent' data-beloworigin="true" href='#' data-activates='signin'><i class="material-icons left">account_circle</i><span class="right hide-on-med-and-down">Sign in</a></span></li>
       </ul>
     </div>
 
@@ -17,15 +19,17 @@
 <!-- Dropdown Structure -->
 <ul id='signin' class='dropdown-content'>
     <!-- <div class="right-align"> -->
-    <a href="#" ><i class="tiny material-icons right-align" id="close-signin">close</i></a>
+    <a href="#" id='close-signin' class="right"><i class="tiny material-icons right-align" id="close-signin">close</i></a>
     <!-- </div> -->
     <div class="row container">
-    <div class="col"><h5> Login with Email</h5> </div>
-    
+    <div class="col" id="login-statement"><h5> Login with Email</h5> </div>
+    <div>
+      
+    </div>
        <form class="login-form" ng-submit="vm.login(user)" ng-data-model="user">
           <div class="row">
             <div class="input-field col s12">
-              <input type="email" class="validate" placeholder="example@domain.com" name="email" ng-model="user.email" required>
+              <input type="email" class="validate" name="email" ng-model="user.email" required>
               <label for="email">Email</label>
             </div>
           </div>

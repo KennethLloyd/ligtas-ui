@@ -1,7 +1,8 @@
 #map {
 	margin-top: -25px;
   	height: 94%;
-  	position: relative;
+  	width: 100%;
+  	position: absolute;
 }
 
 nav {
@@ -197,10 +198,11 @@ nav .brand-logo {
 }
 
 #signin  {
-	background: rgba(1,1,1,0.6);
+	background:rgb(1,1,1,.7);
 	min-width: 20%;
 	text-align: center;
 	margin-right: 0%;
+	z-index: 1;
 }
 
 #loginbtn{
@@ -210,13 +212,36 @@ nav .brand-logo {
 #social-signin {
 	/*margin-left: 100px;*/
 }
+#dropdown1 .material-icons {
+	pointer-events: none;
+}
 
+
+#close-signin {
+	/*position: relative;*/
+	padding-top: 0px;
+  	display: inline-block;
+}
 #logo {
 	margin-top: 0.25%;
 	height: 80%;
 }
-
+#login-statement{
+	padding: 10px;
+}
 #right-info{
-	margin-bottom: 600px;
+	margin-left: 75%;
 	position: absolute;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(96,96,96);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(96,96,96);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(96,96,96);
 }
