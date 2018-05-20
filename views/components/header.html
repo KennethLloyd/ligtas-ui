@@ -49,29 +49,27 @@
         </div>
 </ul>
 
-
+<div>
 <ul id="dropdown2" class="dropdown-content">
 <!--     <li>{{curr}}</li>
     <li><button ng-click=add()>jjjk</button></li> -->
   <li id="first-line">
   <div>
-    <img src="../images/rockslide.jpg" id="rockslide">
+    <img src={{vm.data[curr].img_path}} id="rockslide">
     <a href="#" ><i class="tiny material-icons right-align" id="close-sidenav">close</i></a>
   </div>
   </li>
 
   <li>
-    <div class="col s12 m5">
-      <div class="card-title grey darken-1 z-depth-2">
-        <span class="white-text">&nbsp;{{vm.data[curr].type}}</span>
-      </div>
+    <div class="card-title grey darken-1 z-depth-2">
+      <span class="white-text">&nbsp;{{vm.data[curr].type}}</span>
     </div>
   </li>
   <li>
     <span id="landslide_icon_span" >
-     <i class="large material-icons" id="arrow_back">arrow_back</i>
+     <i class="large material-icons" ng-click="prev()" id="arrow_back">arrow_back</i>
       <img src="../images/landslide_icon_big.png" alt="landslide_icon" id="landslide_icon">
-      <i class="large material-icons" id="arrow_forward">arrow_forward</i>
+      <i class="large material-icons" ng-click="next()" id="arrow_forward">arrow_forward</i>
     </span>
   </li>
   <li>
@@ -100,7 +98,7 @@
   <li>
     <div class="col s12 m5">
       <div class="card-content teal lighten-4 z-depth-2" id="card_details_2a">
-        <span id="card_details_2b">May 21, 2018 10:00 AM PST</span>
+        <span id="card_details_2b">{{vm.data[curr].date}}</span>
       </div>
     </div>
   </li>
@@ -115,7 +113,7 @@
   <li>
     <div class="col s12 m5">
       <div class="card-content teal lighten-4 z-depth-2" id="card_details_3a">
-        <span id="card_details_3b">&nbsp;&nbsp;A landslide caused by rock failure in <br>&nbsp;&nbsp;which part of the bedding plane of <br>&nbsp;&nbsp;failure passes through intact rock.</span>
+        <span id="card_details_3b">{{vm.data[curr].description}}</span>
       </div>
     </div>
   </li>
@@ -145,8 +143,8 @@
       </div>
     </div>
   </li>
-
 </ul>
+</div>  
 
 <script>
 	$(document).ready(function () {
