@@ -33,15 +33,21 @@
               streetViewControl: false,
             });
 
-             dataMap.push({
+            dataMap.push({
               'latitude': 14.164423,
               'longitude' : 121.221257,
               'icon' : '../images/landslide_icon_red.png'
             });
             dataMap.push(
             {
-              'latitude': 14.167562,
-              'longitude' : 121.13248,
+              'latitude': 14.193381,
+              'longitude' : 121.236800,
+              'icon' : '../images/landslide_icon_yellow.png'
+            });
+             dataMap.push(
+            {
+              'latitude': 14.183089,
+              'longitude' : 121.2477202,
               'icon' : '../images/landslide_icon_yellow.png'
             });
 
