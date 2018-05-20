@@ -215,3 +215,8 @@ nav .brand-logo {
 	margin-top: 0.25%;
 	height: 80%;
 }
+
+#right-info{
+	margin-bottom: 600px;
+	position: absolute;
+}
