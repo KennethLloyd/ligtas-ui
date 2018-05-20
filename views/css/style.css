@@ -37,12 +37,24 @@ nav .brand-logo {
 	width: 20%;
 }
 
-#dropdown2 li {
+#dropdown2 li:not(#first-line) {
 	pointer-events:none;
+}
+
+#first-line {
+	position: relative;
+  	display: inline-block;
 }
 
 #dropdown2 #rockslide {
 	width: 100%;
+}
+
+#close-sidenav {
+	position: absolute;
+	left: 95%;
+	top: 8%;
+	transform: translate(-50%, -50%);
 }
 
 .card-title {

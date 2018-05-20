@@ -15,9 +15,9 @@
 </div>
 
 <!-- Dropdown Structure -->
-<ul id='signin' class='dropdown-content noclose'>
+<ul id='signin' class='dropdown-content'>
     <!-- <div class="right-align"> -->
-    <a href="#" ><i class="tiny material-icons right-align">close</i></a>
+    <a href="#" ><i class="tiny material-icons right-align" id="close-signin">close</i></a>
     <!-- </div> -->
     <div class="row container">
     <div class="col"><h5> Login with Email</h5> </div>
@@ -53,7 +53,12 @@
 <ul id="dropdown2" class="dropdown-content">
 <!--     <li>{{curr}}</li>
     <li><button ng-click=add()>jjjk</button></li> -->
-  <li><img src="../images/rockslide.jpg" id="rockslide"></li>
+  <li id="first-line">
+  <div>
+    <img src="../images/rockslide.jpg" id="rockslide">
+    <a href="#" ><i class="tiny material-icons right-align" id="close-sidenav">close</i></a>
+  </div>
+  </li>
 
   <li>
     <div class="col s12 m5">
@@ -155,15 +160,6 @@
       belowOrigin: false, // Displays dropdown below the button
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
     });
-    $(".button-collapse").dropdown({
-       inDuration: 300,
-       outDuration: 225,
-       constrain_width: false, 
-       hover: false, 
-       gutter: 0, 
-       belowOrigin: true ,
-       closeOnClick: false
-    });
     $('.dropdown-button1').dropdown({
       closeOnClick : false, //If true, close dropdown on item click.
       inDuration: 300,
@@ -173,6 +169,22 @@
       gutter: 0, // Spacing from edge
       belowOrigin: false, // Displays dropdown below the button
       alignment: 'right', // Displays dropdown with edge aligned to the right of button
+    });
+
+    $('.dropdown-button + .dropdown-content').on('click', function(event) {
+      event.stopPropagation();
+    });
+
+    $('.dropdown-button1 + .dropdown-content').on('click', function(event) {
+      event.stopPropagation();
+    });
+
+    $('#close-signin').on('click', function(event) {
+      $('.dropdown-button1').dropdown('close');
+    });
+
+    $('#close-sidenav').on('click', function(event) {
+      $('.dropdown-button').dropdown('close');
     });
 
   });
