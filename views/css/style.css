@@ -41,12 +41,21 @@ nav .brand-logo {
 	pointer-events:none;
 }
 
+#dropdown2 .material-icons {
+	pointer-events: auto;
+}
+
+#dropdown2 li:hover {
+	background: none;
+}
+
 #first-line {
 	position: relative;
   	display: inline-block;
 }
 
 #dropdown2 #rockslide {
+	height: 150px;
 	width: 100%;
 }
 
@@ -154,7 +163,7 @@ nav .brand-logo {
 #card_details_3b {
 	margin-left: 0.5%;
 	font-size: 14px;
-
+	white-space: pre-wrap; 
 }
 
 #card_title_4a {
