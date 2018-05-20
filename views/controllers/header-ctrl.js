@@ -25,10 +25,31 @@
         	'description': 'A specific type of Soil Flow landslide where the majority of the soil materials are fine-grained (silt and clay) and cohesive.'
         }
 
-        function add(){
+        $rootScope.$on("CallShowMethod", function(index){
+            console.log(index);
+           $scope.showCurr(index);
+        });
+
+        $scope.add = () => {
+            if($scope.curr < vm.data.length){
+
         		$scope.curr+=1;
-        		console.log($scope.curr);
+            }
+    		console.log($scope.curr);
 
         }
+        $scope.showCurr = (current) => {
+           $scope.curr = current;
+            console.log("curr: " + current);
+
+        }
+        $rootScope.showCurr = (current) => {
+           $scope.curr = current;
+            console.log("curr: " + current);
+            // $state.reload();
+             // $('.dropdown-button').dropdown('open');
+
+        }
+
     }
 })();

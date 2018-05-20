@@ -7,7 +7,7 @@
       <a href="#" class="brand-logo">Landslide Monitoring System</a>
       <!--<img id="logo" class="brand-logo left" src="../../assets/images/logo_web.png" alt="Ligtas Logo"/>-->
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a class='dropdown-button btn transparent' data-beloworigin="true" href='#' data-activates='signin'>Sign in</a></li>
+        <li><a class='dropdown-button1 btn transparent' data-beloworigin="true" href='#' data-activates='signin'>Sign in</a></li>
       </ul>
     </div>
 
@@ -16,8 +16,12 @@
 
 <!-- Dropdown Structure -->
 <ul id='signin' class='dropdown-content noclose'>
+    <!-- <div class="right-align"> -->
+    <a href="#" ><i class="tiny material-icons right-align">close</i></a>
+    <!-- </div> -->
     <div class="row container">
-    <h5> Login with Email</h5>
+    <div class="col"><h5> Login with Email</h5> </div>
+    
        <form class="login-form" ng-submit="vm.login(user)" ng-data-model="user">
           <div class="row">
             <div class="input-field col s12">
@@ -46,7 +50,7 @@
 </ul>
 
 
-<ul id="dropdown2" class="dropdown-content noclose">
+<ul id="dropdown2" class="dropdown-content">
 <!--     <li>{{curr}}</li>
     <li><button ng-click=add()>jjjk</button></li> -->
   <li><img src="../images/rockslide.jpg" id="rockslide"></li>
@@ -61,7 +65,7 @@
   <li>
     <span id="landslide_icon_span" >
      <i class="large material-icons" id="arrow_back">arrow_back</i>
-      <img src="../images/landslide_icon.png" alt="landslide_icon" id="landslide_icon">
+      <img src="../images/landslide_icon_big.png" alt="landslide_icon" id="landslide_icon">
       <i class="large material-icons" id="arrow_forward">arrow_forward</i>
     </span>
   </li>
@@ -142,6 +146,7 @@
 <script>
 	$(document).ready(function () {
 		$('.dropdown-button').dropdown({
+      closeOnClick : false, 
       inDuration: 300,
       outDuration: 225,
       constrain_width: false, // Does not change width of dropdown to that of the activator
@@ -149,19 +154,28 @@
       gutter: 0, // Spacing from edge
       belowOrigin: false, // Displays dropdown below the button
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
-    }
-  );
-  $(".button-collapse").dropdown({
+    });
+    $(".button-collapse").dropdown({
        inDuration: 300,
        outDuration: 225,
        constrain_width: false, 
        hover: false, 
        gutter: 0, 
-       belowOrigin: true 
-       }
-    );
-	});
+       belowOrigin: true ,
+       closeOnClick: false
+    });
+    $('.dropdown-button1').dropdown({
+      closeOnClick : false, //If true, close dropdown on item click.
+      inDuration: 300,
+      outDuration: 225,
+      constrain_width: false, // Does not change width of dropdown to that of the activator
+      // hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'right', // Displays dropdown with edge aligned to the right of button
+    });
 
+  });
 </script>
 
 

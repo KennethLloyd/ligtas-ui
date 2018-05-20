@@ -5,12 +5,13 @@
         .module('app')
         .controller('MapCtrl', MapCtrl);
 
-    MapCtrl.$inject = ['$scope', '$state'];
+    MapCtrl.$inject = ['$scope','$rootScope', '$state'];
 
-    function MapCtrl ($scope, $state){
+    function MapCtrl ($scope, $rootScope, $state){
         var vm                  = this;
 
         vm.titleHeader = 'Map';
+        var dataMap = [];
         var mapUsers = [];
         var markers = [];
         var map;
@@ -32,8 +33,36 @@
               streetViewControl: false,
             });
 
+             dataMap.push({
+              'latitude': 14.164423,
+              'longitude' : 121.221257,
+              'icon' : '../images/landslide_icon_red.png'
+            });
+            dataMap.push(
+            {
+              'latitude': 14.167562,
+              'longitude' : 121.13248,
+              'icon' : '../images/landslide_icon_yellow.png'
+            });
+
+            // map.addListener('click', function() {
+            //   for(var i=0;i<markers.length;i++){
+            //       if(markers[i].getIcon() == '../images/landslide_icon_clicked_red.png' && markers[i]!=marker){
+            //         console.log("traverse: clicked red therefore base");
+            //         markers[i].setIcon('../images/landslide_icon_red.png');
+            //       }
+
+            //       else if(markers[i].getIcon() == '../images/landslide_icon_clicked_yellow.png'  && markers[i]!=marker) {
+            //         console.log("traverse: clicked yellow therefore base");
+            //         markers[i].setIcon('../images/landslide_icon_yellow.png');
+            //       }
+            //     }
+            // });
+
+            addInitMap();
         }
 
+       
         // {
         //   latitude: 14.000,
         //   longitude: 22.000
@@ -42,11 +71,11 @@
         function addMarker(props){
           console.log(props);
 
-            var infowindow = new google.maps.InfoWindow({
-              content: contentString
-            });
+            // var infowindow = new google.maps.InfoWindow({
+            //   content: contentString
+            // });
             
-            console.log(props.longitude);
+            // console.log(props.longitude);
             if(props.longitude){
               var marker = new google.maps.Marker({
                 position:{
@@ -54,56 +83,64 @@
                   lng:props.longitude
                 },
                 map:map,
-                icon: '../../assets/images/baseline_person_pin_circle_black_18dp.png'
+                icon: props.icon
                   
               });
               marker.addListener('click', function() {
-                infowindow.open(map, marker);
-              });
+                for(var i=0;i<markers.length;i++){
+                  if(markers[i].getIcon() == '../images/landslide_icon_clicked_red.png' && markers[i]!=marker){
+                    console.log("traverse: clicked red therefore base");
+                    markers[i].setIcon('../images/landslide_icon_red.png');
+                    $('.dropdown-button').dropdown('close');
+                  }
 
+                  else if(markers[i].getIcon() == '../images/landslide_icon_clicked_yellow.png'  && markers[i]!=marker) {
+                    console.log("traverse: clicked yellow therefore base");
+                    markers[i].setIcon('../images/landslide_icon_yellow.png');
+                    $('.dropdown-button').dropdown('close');
+                  }
 
-              if(mapUsers.includes(props.uid)){
-                // console.log("UPDATE");
-                var index = mapUsers.indexOf(props.uid);
-                markers[index].setPosition(marker.position);
-              }
-              else{
-                // console.log("NEW");
-                markers.push(marker);
-                mapUsers.push(props.uid);
-              } 
-            }
-            else{
-
-              if(mapUsers.includes(props.uid)){
-                try{
-
-                  // $state.reload();
                 }
-                catch(err){}
-                
-              }
+                console.log(markers.indexOf(marker));
+                // $scope.curr = ;
+
+                 // $rootScope.$emit("CallShowMethod", markers.indexOf(marker));
+                 $rootScope.showCurr(markers.indexOf(marker));
+                if(marker.getIcon() == '../images/landslide_icon_clicked_red.png'){
+                  console.log("red and clicked therefore closing");
+                  marker.setIcon('../images/landslide_icon_red.png');
+                  $('.dropdown-button').dropdown('close');
+                }
+                else if (marker.getIcon() == '../images/landslide_icon_red.png'){
+                  console.log("red therefore open and clicked");
+                  marker.setIcon('../images/landslide_icon_clicked_red.png');
+                  $('.dropdown-button').dropdown('open');
+                }
+                else if(marker.getIcon() == '../images/landslide_icon_clicked_yellow.png'){
+                  console.log("yellow and clicked therefore closing");
+                  marker.setIcon('../images/landslide_icon_yellow.png');
+                  $('.dropdown-button').dropdown('close');
+                }
+                else if (marker.getIcon() == '../images/landslide_icon_yellow.png'){
+                  console.log("yellow therefore open and clicked");
+                  marker.setIcon('../images/landslide_icon_clicked_yellow.png');
+                  $('.dropdown-button').dropdown('open');
+                }
+              });
+              markers.push(marker);
+              console.log("added");
+             
             }
           }
 
-
-        function singleAddMarker(props){
-
-          if(props.longitude){
-              var marker = new google.maps.Marker({
-                position:{
-                  lat:props.latitude,
-                  lng:props.longitude
-                },
-                map:map,
-                icon: '../../assets/images/baseline_person_pin_circle_black_18dp.png'
-                  
-              });
-              
-                markers.push(marker);
-               
+          function addInitMap() {
+            console.log(dataMap)
+            for(var i=0;i<dataMap.length;i++){
+              console.log(dataMap[i]);
+              addMarker(dataMap[i]);
             }
-        }
+          }
+       
 
         vm.initMap();
 
