@@ -59,7 +59,7 @@ nav .brand-logo {
 
 .card-title {
 	margin-left: 0px;
-	margin-top: -5px;
+	margin-top: 0px;
 	height: 25px;
 	width: 100%;
 }
@@ -200,4 +200,9 @@ nav .brand-logo {
 }
 #social-signin {
 	/*margin-left: 100px;*/
+}
+
+#logo {
+	margin-top: 0.25%;
+	height: 80%;
 }
